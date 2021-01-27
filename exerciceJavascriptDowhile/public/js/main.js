@@ -31,3 +31,9 @@
 //   index--;
 //   console.log(array);
 // } while (array.shift());
+
+// do {
+//   array.shift();
+//   console.log(array);
+// } while (array.length);
+// console.log(array);
