@@ -1,3 +1,4 @@
+
 let direBonjour = (prenom, nom) => {
     console.log(`Bonjour ${prenom} ${nom}!`);
 };
@@ -5,11 +6,17 @@ direBonjour("Nghia","Mai");
 
 // Exo1
 
+// fonction fructueuse
 function addition(nombre, nombre1) {
     return nombre + nombre1;
 };
 console.log(addition(2,7));
 
+// Fonction infructueuse
+let maFonction = (param1,param2) => {
+    console.log(param1 + param2);
+}
+maFonction(12,54);
 
 // Exo2
 
@@ -49,14 +56,41 @@ console.log(carre(5));
 // Exo7
 
 function exposant(nombre, nombre1) {
-    return  Math.pow(nombre,nombre1);
+    return  nombre ** nombre1;
 };
 console.log(exposant(2,3));
 
 // Exo8
 
-function capitalize(mot) {
-    return mot;
-};
-console.log();
+function capitalize(a){
+    
+    return a.charAt(0).toUpperCase()+a.substr(1);
+}
+console.log(capitalize("test"));
+
+// Exo9
+
+let calcul = (par_1, par_2, opé) => {
+        switch (opé) {
+            case "+":
+            return (`Votre calcul est ${par_1} + ${par_2} = ${par_1+par_2}`);
+            case "-":
+            return (`Votre calcul est ${par_1} - ${par_2} = ${par_1-par_2}`);
+            case "":
+            return (`Votre calcul est ${par_1} x ${par_2} = ${par_1par_2}`);
+            case "/":
+            return(`Votre calcul est ${par_1} / ${par_2} = ${par_1/par_2}`);
+            case "%":
+            return(`Votre calcul est ${par_1} % ${par_2} = ${par_1%par_2}`);
+
+            default:
+                alert("Drôle de chiffres..")
+}
+}
+
+console.log(calcul(10, 2, "-"));
+console.log(calcul(3, 8, "+"));
+console.log(calcul(4, 5, "*"));
+console.log(calcul(8, 2, "/"));
+console.log(calcul(10, 3, "%"));
 
