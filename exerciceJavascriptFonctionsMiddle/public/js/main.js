@@ -23,11 +23,11 @@
 // function estPair(nombre){
 //     switch (nombre % 2) {
 //         case 0 :
-//             console.log("Le nombre " +nombre+ " est pair, il est divisible par 2");
-//             break;
+//             return("Le nombre " +nombre+ " est pair, il est divisible par 2");
+//         case 1 :    
+//             return("Le nombre " +nombre+ " est imppair, il est divisible par 2");
 //         default:
-//             console.log("Ce nombre est impair, il n'est pas divisible par 2.");
-//             break;
+//             return("raté")
 //     }
 // }
 // estPair(12);
@@ -35,15 +35,20 @@
 
 // Exo 3 : LogIn
 
-let index;
-function logIn(mdp){
-    if (mdp == index) {
-        alert("Vous êtes bien connecté")
-    } else {
+// let index;
+// function logIn(mdp){
+//     if (mdp == index) {
+//         alert("Vous êtes bien connecté")
+//     } else {
         
-    }
-}
+//     }
+// }
 
-let logIn = (mdp) => {
-
+let logIn = () => {
+let mdp;
+do{
+    mdp = prompt("Quelle est votre mot de passe?")
+} while (mdp !== "god")
+alert("Tu es connecté!!")
 }
+logIn()
