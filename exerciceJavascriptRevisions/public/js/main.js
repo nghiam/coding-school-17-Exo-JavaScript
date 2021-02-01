@@ -65,5 +65,151 @@
 // 5.
 // let tableau = ["abricot","banane","canard","doigt","element"];
 
-// console.log(tableau[4].replace('t',''));
+// console.log(tableau[4].replace('e',''));
+
+// 6.
+// let tableau = ["abricot","banane","canard","doigt","element"];
+
+// console.log(tableau[0].substr(0,2));
+
+// 7.
+// let tableau = ["abricot","banane","canard","doigt","element"];
+
+// console.log(tableau[0] +" "+ tableau[2]);
+
+// 8.
+// let tableau = ["abricot","banane","canard","doigt","element"];
+
+// console.log( tableau[1].substr(0,3) + tableau[4].substr(3));
+
+// 9.
+// let tableau = ["abricot","banane","canard","doigt","element"];
+
+// console.log(tableau[2].substr(0,2).toUpperCase() + tableau[4] );
+
+// 10.
+// let tableau = ["abricot","banane","canard","doigt","element"];
+
+
+// console.log(tableau[0].substr(0,2).charAt(0).toLowerCase() + tableau[0].substr(0,2).charAt(1).toUpperCase()  +" "+ tableau[1].substr(0,2).charAt(0).toLowerCase() + tableau[1].substr(0,2).charAt(1).toUpperCase() +" "+ tableau[2].substr(0,2).charAt(0).toLowerCase() + tableau[2].substr(0,2).charAt(1).toUpperCase() +" "+ tableau[3].substr(0,2).charAt(0).toLowerCase() + tableau[3].substr(0,2).charAt(1).toUpperCase() +" "+ tableau[4].substr(0,2).charAt(0).toLowerCase() + tableau[4].substr(0,2).charAt(1).toUpperCase());
+
+// for (let i = 0; i <= 4; i++) {
+//     console.log(tableau[i].substr(0,2).charAt(0).toLowerCase() + tableau[i].substr(0,2).charAt(1).toUpperCase());
+    
+// }
+// ______________________________________________________________________________________________
+
+// Exo 3 : Part I
+
+// 1.
+// let tableau = [
+// "Mick",
+// "Patrick",
+// "Homer",
+// "Mehdi",
+// "Witch",
+// "Poulard",
+// "Amen",
+// "Ludovic",
+// "Harry",
+// ]
+
+// console.log(tableau);
+
+
+// 2.
+
+// let tableau = [
+// "Mick",
+// "Patrick",
+// "Homer",
+// "Mehdi",
+// "Witch",
+// "Poulard",
+// "Amen",
+// "Ludovic",
+// "Harry",
+// ]
+
+// for (let index = 0; index <= 8; index++) {
+//     console.log(tableau[index]);
+    
+// }
+
+// 3.
+
+// let tableau = [
+// "Mick",
+// "Patrick",
+// "Homer",
+// "Mehdi",
+// "Witch",
+// "Poulard",
+// "Amen",
+// "Ludovic",
+// "Harry",
+// ]
+
+// for (let index = 0; index <= 8; index++) {
+//     console.log(tableau[index].charAt(0));
+// }
+
+// 4.
+
+// let tableau = [
+// "Mick",
+// "Patrick",
+// "Homer",
+// "Mehdi",
+// "Witch",
+// "Poulard",
+// "Amen",
+// "Ludovic",
+// "Harry",
+// ]
+
+// for (let index = 0; index <= 8; index++) {
+//     console.log(tableau[index].charAt(1));
+// }
+
+// 5.
+
+// let tableau = [
+// "Mick",
+// "Patrick",
+// "Homer",
+// "Mehdi",
+// "Witch",
+// "Poulard",
+// "Amen",
+// "Ludovic",
+// "Harry",
+// ]
+
+// for (let index = 0; index <= 8; index++) {
+//     console.log(tableau[index].charAt(1) + tableau[index]);
+// }
+
+// 6.
+// let tableau = [
+// "Mick",
+// "Patrick",
+// "Homer",
+// "Mehdi",
+// "Witch",
+// "Poulard",
+// "Amen",
+// "Ludovic",
+// "Harry",
+// ]
+
+// for (let index = 0; index < tableau.length ; index++) {
+
+//     if (index % 2 == 0) {
+//         console.log(tableau[index]);
+//     }
+// }
+
+
+
 
