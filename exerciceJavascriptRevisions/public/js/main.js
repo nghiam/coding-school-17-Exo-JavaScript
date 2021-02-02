@@ -511,7 +511,8 @@
 // ]
 
 // tableau.forEach((e,index) => {
-//     if (e.length < 5 && ( e.charAt(0) == "k"|| e.charAt(0) == "c" || e.charAt(0) == "m" || e.charAt(0) == "f" || e.charAt(0) == "y" || e.charAt(0) == "n" || e.charAt(0) == "a" || e.charAt(0) == "e" || e.charAt(0) == "p" || e.charAt(0) == "o")) {
+
+//     if (e.length > 4 && ( e.charAt(0) == "k"|| e.charAt(0) == "c" || e.charAt(0) == "m" || e.charAt(0) == "f" || e.charAt(0) == "y" || e.charAt(0) == "n" || e.charAt(0) == "a" || e.charAt(0) == "e" || e.charAt(0) == "p" || e.charAt(0) == "o")) {
 //         if ( index % 2 == 1)
 //         console.log(e[0].toUpperCase() + e.slice(1)); // [0] == charAt(0)
 //     }
@@ -532,7 +533,7 @@
 // ]
 
 // tableau.forEach((e,index) => {
-//     if (e.length < 5 && ( e.charAt(0) == "k"|| e.charAt(0) == "c" || e.charAt(0) == "m" || e.charAt(0) == "f" || e.charAt(0) == "y" || e.charAt(0) == "n" || e.charAt(0) == "a" || e.charAt(0) == "e" || e.charAt(0) == "p" || e.charAt(0) == "o")) {
+//     if (e.length > 5 && ( e.charAt(0) == "k"|| e.charAt(0) == "c" || e.charAt(0) == "m" || e.charAt(0) == "f" || e.charAt(0) == "y" || e.charAt(0) == "n" || e.charAt(0) == "a" || e.charAt(0) == "e" || e.charAt(0) == "p" || e.charAt(0) == "o")) {
 //         if ( index % 2 == 0)
 //         console.log(e[0].toLowerCase() + e[1].toUpperCase() + e[e.length-1].toUpperCase()); // [0] == charAt(0)
 //     }
@@ -567,39 +568,39 @@
 
 // 1.
 
-let leTableau = [
-    4,
-    "true",
-    true,
-    "bonjour",
-    511,
-    "coding school",
-    {},
-    2020,
-    1 ,
-    "maryam",
-    false,
-    [],
-    13,
-    ["salut",13,false],
-    "les tartines c'est délicieux",
-    "true et false",
-    1070,
-    478,
-    "hello",
-    "top",
-    4000,
-    99,
-    "codeur",
-    45,
-    "javascript",
-    399,
-    "autodidacte",
-    "oui",
-    1000,
-    1001,
-    "brainstorming",
-    "lol"];
+// let leTableau = [
+//     4,
+//     "true",
+//     true,
+//     "bonjour",
+//     511,
+//     "coding school",
+//     {},
+//     2020,
+//     1 ,
+//     "maryam",
+//     false,
+//     [],
+//     13,
+//     ["salut",13,false],
+//     "les tartines c'est délicieux",
+//     "true et false",
+//     1070,
+//     478,
+//     "hello",
+//     "top",
+//     4000,
+//     99,
+//     "codeur",
+//     45,
+//     "javascript",
+//     399,
+//     "autodidacte",
+//     "oui",
+//     1000,
+//     1001,
+//     "brainstorming",
+//     "lol"];
 
 
 
@@ -611,14 +612,144 @@ let leTableau = [
 
 // 2.
 
-let lesIntegers = [];
-let lesStrings = [];
-let lesAutres = [];
+// let leTableau = [
+//     4,
+//     "true",
+//     true,
+//     "bonjour",
+//     511,
+//     "coding school",
+//     {},
+//     2020,
+//     1 ,
+//     "maryam",
+//     false,
+//     [],
+//     13,
+//     ["salut",13,false],
+//     "les tartines c'est délicieux",
+//     "true et false",
+//     1070,
+//     478,
+//     "hello",
+//     "top",
+//     4000,
+//     99,
+//     "codeur",
+//     45,
+//     "javascript",
+//     399,
+//     "autodidacte",
+//     "oui",
+//     1000,
+//     1001,
+//     "brainstorming",
+//     "lol"];
 
 
-lesIntegers.forEach(element => {
-    leTableau.slice(typeof(int)) += lesIntegers
+// let lesIntegers = [];
+// let lesStrings = [];
+// let lesAutres = [];
 
-});
-console.log(lesIntegers);
-console.log(leTableau);
+
+
+// leTableau.forEach(element => {
+//     if (typeof element === 'number') {
+//        lesIntegers.push(element)
+//     }
+
+//     else if (typeof element === "string") {
+//         lesStrings.push(element)
+//     }
+
+//     else {
+//         lesAutres.push(element)
+//     }
+// });
+// console.log(lesIntegers);
+// console.log(lesStrings);
+// console.log(lesAutres);
+
+
+// 3.
+
+// let leTableau = [
+//     4,
+//     "true",
+//     true,
+//     "bonjour",
+//     511,
+//     "coding school",
+//     {},
+//     2020,
+//     1 ,
+//     "maryam",
+//     false,
+//     [],
+//     13,
+//     ["salut",13,false],
+//     "les tartines c'est délicieux",
+//     "true et false",
+//     1070,
+//     478,
+//     "hello",
+//     "top",
+//     4000,
+//     99,
+//     "codeur",
+//     45,
+//     "javascript",
+//     399,
+//     "autodidacte",
+//     "oui",
+//     1000,
+//     1001,
+//     "brainstorming",
+//     "lol"];
+
+// let lesGrandsIntegers = [];
+// let lesPetitsIntegers = [];
+// let lesPetitsStrings = [];
+// let lesGrandsStrings = [];
+
+
+// leTableau.forEach(element => {
+// if (typeof element === 'number' && element < 100 ) {
+//     lesPetitsIntegers.push(element)
+// } 
+// else if (typeof element === 'number' && element > 100) {
+//     lesGrandsIntegers.push(element)
+// } 
+// else if ( typeof element === "string" && element.length < 6 ) {
+//     lesPetitsStrings.push(element)
+// }
+// else if ( typeof element === "string" && element.length > 6) {
+//     lesGrandsStrings.push(element)
+// }
+
+// });
+
+// console.log(lesPetitsIntegers);
+// console.log(lesGrandsIntegers);
+// console.log(lesPetitsStrings);
+// console.log(lesGrandsStrings);
+
+
+// 4.
+
+let leTableau = [45,39,1039,308,89,1208,124,1920];
+
+
+    let premierPot = [];
+    let deuxiemePot = [];
+
+    leTableau.forEach(element => {
+        if (typeof element === 'number' && element.length >= 100) {
+            premierPot.push(element)
+        } 
+        else if ( typeof element === 'number' && element.length < 100) {
+            deuxiemePot.push(element)
+        }
+    });
+    console.log(premierPot);
+    console.log(deuxiemePot);
