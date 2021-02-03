@@ -123,22 +123,47 @@
 
 
 // 1.
+// 2.
 
-let vieille_dame = {
-    age : 79,
-    prenom : "Ludvik",
-    nom : "Moluz",
-    moral : "mal",
-    objet : "canne",
 
-    parler(){
-        if ("moral" == "mal") {
-            console.log(`Vous me dérangez et je vous frappe avec ma ${objet}`);
-        }
-    }
-}
 
-vieille_dame.parler();
+// let vieille_dame = {
+//     age : 79,
+//     prenom : "Ludvika",
+//     nom : "Moluz",
+//     moral : "mal",
+//     objet : "canne",
+    
+//     parler(){
+//         if (this.moral == "mal") {
+//             alert(`Vous me dérangez et je vous frappe avec ma ${vieille_dame.objet}`);
+//         } else if (this.moral == "bien") {
+//             alert(`Bonjour ${vieil_homme.nom}`);
+//         } 
+//     }
+// }
+// vieille_dame.parler();
+
+// let vieil_homme = {
+//     nom : "Jeje le papy",
+
+//     adoucir(x){
+//        x.moral = "bien";
+//     }
+// }
+
+// 3.   
+// vieil_homme.adoucir(vieille_dame);
+
+// console.log(vieille_dame);
+// console.log(vieil_homme);
+
+
+//4.
+
+// vieille_dame.parler();
+// vieil_homme.adoucir();
+// vieille_dame.parler();
 
 
 
