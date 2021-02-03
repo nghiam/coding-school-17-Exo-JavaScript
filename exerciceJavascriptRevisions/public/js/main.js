@@ -717,39 +717,87 @@
 // if (typeof element === 'number' && element < 100 ) {
 //     lesPetitsIntegers.push(element)
 // } 
-// else if (typeof element === 'number' && element > 100) {
+// else if (typeof element === 'number' && element >= 100) {
 //     lesGrandsIntegers.push(element)
 // } 
 // else if ( typeof element === "string" && element.length < 6 ) {
 //     lesPetitsStrings.push(element)
 // }
-// else if ( typeof element === "string" && element.length > 6) {
+// else if ( typeof element === "string" && element.length >= 6) {
 //     lesGrandsStrings.push(element)
 // }
 
 // });
 
-// console.log(lesPetitsIntegers);
-// console.log(lesGrandsIntegers);
-// console.log(lesPetitsStrings);
-// console.log(lesGrandsStrings);
+// console.table(lesPetitsIntegers);
+// console.table(lesGrandsIntegers);
+// console.table(lesPetitsStrings);
+// console.table(lesGrandsStrings);
 
 
 // 4.
 
-let leTableau = [45,39,1039,308,89,1208,124,1920];
+    // let premierPot = [];
+    // let deuxiemePot = [];
 
 
-    let premierPot = [];
-    let deuxiemePot = [];
+    // let i = 0;
 
-    leTableau.forEach(element => {
-        if (typeof element === 'number' && element.length >= 100) {
-            premierPot.push(element)
-        } 
-        else if ( typeof element === 'number' && element.length < 100) {
-            deuxiemePot.push(element)
-        }
-    });
-    console.log(premierPot);
-    console.log(deuxiemePot);
+    // while(i<11) {
+    //     let question = parseInt(prompt("Donne moi un nombre :"))
+    //     if (question <= 100 && question > 0) {
+    //         i++;
+    //         premietPot.push(question)
+    //     }else if (question <= 0) {
+    //         alert("t'es foutu");
+    //     }else {
+    //         deuxiemPot.push(question);
+    //         i++;
+    //     }
+    // }
+
+    // console.table(premierPot);
+    // console.table(deuxiemePot);
+
+    // 5.
+
+// let panier = [];
+// let legumeIndex = [];
+// for (let i = 0; i < 4; i++) {
+//     if (parseInt(prompt("0 pour fruit et 1 pour légume"))) {
+//         legumeIndex.push(i)
+//         panier.push(prompt("votre legume"));
+//     } else {
+//         panier.push(prompt("votre fruit"));
+//     }
+// }
+// panier.forEach((elem, index, tab) => {
+//     if (legumeIndex.includes(index)) {
+//         console.log(elem, "est un légume");
+//     } else {
+//         console.log(elem, "est un fruit");
+//     }
+// })
+   
+
+// 6.
+
+// let vetements = ['chaussure classique', 't-shirt super héro', 'pull col roulé', 'basket de sport', 'chaussettes blanches', 'pentalon noir', 'soutien-gorge', 'pull rayé', 't-shirt soleil souriant', 'caleçon blanc'];
+// let sousVetements = [];
+// let chaussures = [];
+// for (let i = vetements.length; i >= 0; i--) {
+//     const elem = vetements.shift();
+//     let categorie = parseInt(prompt(elem + " 1: sousVetements, 2: vetements, 3: chausures"));
+//     switch (categorie) {
+//         case 1:
+//             sousVetements.push(elem);
+//             break;
+//         case 2:
+//             chaussures.push(elem);
+//             break;
+//         case 3:
+//             vetements.push(elem);
+//             break;
+//     }
+// }
+// console.log(vetements, sousVetements, chaussures);
