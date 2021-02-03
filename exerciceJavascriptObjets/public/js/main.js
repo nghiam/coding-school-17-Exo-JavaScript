@@ -1,6 +1,6 @@
 // Exo : Objets
 
-// Exo 1
+// Consigne1
 // 1.
 
 // let personne1 = {
@@ -59,7 +59,7 @@
 // console.log(voleur);
 
 
-// Exo2
+// Consigne2
 
 // 1.
 
@@ -68,7 +68,7 @@
 //     prenom : "Frank",
 
 //     sePresenter(){
-//         console.log(`Bonjour je m'appelle ${this.nom + this.prenom}`);
+//         console.log(`Bonjour je m'appelle ${this.nom} ${this.prenom}`);
 //     }
 // }
 
@@ -77,11 +77,70 @@
 
 // 2.
 
-let objet = {
-    nom : "Dadou",
-    age :
-    changeAge(age){
-        prompt(age = new age);
+// let objet = {
+//     nom : "Dadou",
+//     age : 0,
+//     changeAge(){
+//         this.age = parseInt(prompt("Changez votre âge : "));
+//     }
+// }
+// objet.changeAge();
+// alert(objet.nom +" a "+ objet.age +" ans");
+
+
+
+// Consigne3
+
+
+// 1.
+// 2.
+// 3.
+
+// let personnage1 = {
+//     nom : "Francois",
+//     panier : ["huile","sel","poivre"],
+
+//     derober() {
+
+//         let ingredient = personnage2.panier.shift()
+//         personnage1.panier.push(ingredient)
+//         ingredient = personnage2.panier.shift()
+//         personnage1.panier.push(ingredient)
+
+//     }
+// }
+
+// let personnage2 = {
+//     nom : "Sergio",
+//     panier : ["ciboulette","noix","muscade","biscotte"],
+// }
+
+// personnage1.derober();
+// console.log(personnage2);
+// console.log(personnage1);
+
+// Consigne4
+
+
+// 1.
+
+let vieille_dame = {
+    age : 79,
+    prenom : "Ludvik",
+    nom : "Moluz",
+    moral : "mal",
+    objet : "canne",
+
+    parler(){
+        if ("moral" == "mal") {
+            console.log(`Vous me dérangez et je vous frappe avec ma ${objet}`);
+        }
     }
 }
-alert(objet = changeAge)
+
+vieille_dame.parler();
+
+
+
+
+
