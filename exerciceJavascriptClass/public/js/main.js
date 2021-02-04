@@ -66,11 +66,17 @@
 //         this.lieu = lieu;
 //         this.argent = argent;
 //         this.panier = panier;
-//         this.seDeplacer = (x) => {
+//         this.seDeplacer = (lieu) => {
+//             console.log(`${this.nom} se deplace dans ${lieu.nom}`)
 //         }
-//         this.payer = (x) => {
+//         this.payer = (article) => {
+//             this.argent -= article.prix;
+//             this.panier.push(article);
 //         }
-//         this.couper = (x,y) => {
+//         this.couper = (article) => {
+//             if (article.etat =="entier"){
+//                 article.etat = "coupé"
+//             }
 //         }
 //     }
 // }
@@ -81,36 +87,99 @@
 // EXO3_CLASS
 // EXO1 & EXO2
 
-class Objet {
-    constructor(nom,prix){
-        this.nom = nom;
-        this.prix = prix;
+// class Objet {
+//     constructor(nom,prix){
+//         this.nom = nom;
+//         this.prix = prix;
         
-    }
-}
-let boite = [];
+//     }
+// }
+// let boite = [];
 
 
-let Stylo = new Objet("stylo",2.5,[]);
-let Table = new Objet("table",60,[]);
+// let stylo = new Objet("stylo",2.5,[]);
+// let table = new Objet("table",60,[]);
 
-boite.push(Stylo);
-boite.push(Table);
-console.log(boite);
+// boite.push(stylo);
+// boite.push(table);
+// console.log(boite);
 
 
 // EXO3
-class Personnage {
-    constructor(nom,sac,argent){
-        this.nom = nom;
-        this.sac = sac;
-        this.argent = argent;
+// class Personnage {
+//     constructor(nom,sac,argent){
+//         this.nom = nom;
+//         this.sac = sac;
+//         this.argent = argent;
 
-        this.prendre = () => {
+//         this.prendre = (objet) => {
+//             sac.push(objet);
+//         }
+//         this.acheter = (vendeur,objet) => {
+//             sac.push(objet)
+//             vendeur.sac.splice(vendeur.sac.indexOf(objet),1)
+//             argent -= objet.prix
+//             vendeur.argent += objet.prix
+//         }
+//     }
+// }
+
+// let franki = new Personnage("franki",[],150);
+// let kiki = new Personnage("kiki",[],80);
+
+// franki.prendre(stylo);
+// kiki.prendre(table);
+
+// kiki.acheter(franki,stylo);
+
+// console.log(franki);
+// console.log(kiki);
+
+
+// EXO4_CLASS
+// EXO1
+
+class Lieu  {
+    constructor(nom,personnes){
+        this.nom = nom;
+        this.personnes = personnes;
+    }
+}
+
+let molengeek = new Lieu("molengeek",[]);
+let snack = new Lieu("Snack",[]);
+let maison = new Lieu("Maison",[]);
+
+class Personne {
+    constructor(nom,prenom,argent){
+        this.nom = nom;
+        this.prenom = prenom;
+        this.argent = argent;
+    }
+
+    seDeplacer = (lieu) => {
+        embarquer = () => {
 
         }
-        this.acheter = () => {
-            
+    }
+}
+
+
+
+let marc = new Personne("julo","marc",658);
+
+class Bus {
+    constructor(personne,caisse){
+        this.personne = personne;
+        this.caisse = caisse;
+    }
+
+    embarquer = () => {
+        seDeplacer = (Personne) => {
+            if (argent) {
+                Personne.argent -= prix.argent
+                Bus.caisse += prix.argent
+            }
         }
     }
 }
