@@ -127,43 +127,40 @@
 
 
 
-// let vieille_dame = {
-//     age : 79,
-//     prenom : "Ludvika",
-//     nom : "Moluz",
-//     moral : "mal",
-//     objet : "canne",
+let vieille_dame = {
+    age : 79, 
+    nom : {
+        prenom : "Ludvika",
+        nom2 : "Moluz",
+    },
+    moral : "mal",
+    objet : "canne",
     
-//     parler(){
-//         if (this.moral == "mal") {
-//             alert(`Vous me dérangez et je vous frappe avec ma ${vieille_dame.objet}`);
-//         } else if (this.moral == "bien") {
-//             alert(`Bonjour ${vieil_homme.nom}`);
-//         } 
-//     }
-// }
-// vieille_dame.parler();
+    parler(x){
+        if (this.moral == "mal") {
+            alert(`Vous me dérangez et je vous frappe avec ma ${vieille_dame.objet}`);
+        } else if (this.moral == "bien") {
+            alert(`Bonjour ${x.nom.prenom} ${x.nom.nom2}`);
+        } 
+    }
+}
 
-// let vieil_homme = {
-//     nom : "Jeje le papy",
+let vieil_homme = {
+    nom : {
+        prenom : "Jeje le papy",
+        nom2 : "Kilow"
+    },
 
-//     adoucir(x){
-//        x.moral = "bien";
-//     }
-// }
+    adoucir(x){
+       x.moral = "bien";
+    }
+}
 
-// 3.   
-// vieil_homme.adoucir(vieille_dame);
+4.
 
-// console.log(vieille_dame);
-// console.log(vieil_homme);
-
-
-//4.
-
-// vieille_dame.parler();
-// vieil_homme.adoucir();
-// vieille_dame.parler();
+vieille_dame.parler(vieil_homme);
+vieil_homme.adoucir(vieille_dame);
+vieille_dame.parler(vieil_homme);
 
 
 
