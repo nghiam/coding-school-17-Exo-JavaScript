@@ -139,47 +139,156 @@
 // EXO4_CLASS
 // EXO1
 
-class Lieu  {
-    constructor(nom,personnes){
-        this.nom = nom;
-        this.personnes = personnes;
-    }
-}
+// class Lieu  {
+//     constructor(nom,personnes){
+//         this.nom = nom;
+//         this.personnes = personnes;
+//     }
+// }
 
-let molengeek = new Lieu("molengeek",[]);
-let snack = new Lieu("Snack",[]);
-let maison = new Lieu("Maison",[]);
+// let molengeek = new Lieu("molengeek",[]);
+// let snack = new Lieu("Snack",[]);
+// let maison = new Lieu("Maison",[]);
 
-class Personne {
-    constructor(nom,prenom,argent){
-        this.nom = nom;
+// class Personne {
+//     constructor(nom,prenom,argent){
+//         this.nom = nom;
+//         this.prenom = prenom;
+//         this.argent = argent;
+//     }
+
+//     seDeplacer = (lieu) => {
+//         embarquer = (bus) => {
+
+//         }
+//     }
+// }
+
+
+// let marc = new Personne("julo","marc",658);
+
+// class Bus {
+//     constructor(personne,caisse){
+//         this.personne = personne;
+//         this.caisse = caisse;
+//     }
+
+//     embarquer = () => {
+//         seDeplacer = (Personne) => {
+//             if (argent) {
+//                 Personne.argent -= prix.argent
+//                 Bus.caisse += prix.argent
+//             }
+//         }
+//     }
+// }
+
+// let bubus = new Bus("bubus",12);
+
+// marc.seDeplacer(bubus);
+
+
+// console.log(`8h00 Vous êtes à la maison`)
+
+// CORRECTION EXO4 
+
+    // class Lieu {
+    //     constructor(nom,personnes){
+    //         this.nom = nom;
+    //         this.personnes = [];
+    //     }
+    // }
+
+    // let maison = new Lieu("Maison");
+    // let snack = new Lieu("Snack");
+    // let molengeek = new Lieu("Molengeek");
+
+    // class Personne {
+    //     constructor(nom,prenom,argent){
+    //         this.nom = nom;
+    //         this.prenom = prenom;
+    //         this.argent = argent;
+    //         this.seDeplacer = (depart,destination,moyenT) => {
+    //             if (moyenT == null) {
+    //                 depart.personnes.splice(depart.personnes.indexOf(this,1));
+    //                 destination.personnes.push(this);
+    //                 console.log(`${this.nom} se dirige à ${destination.nom} à pied`);
+    //             } else {
+    //                 moyenT.embarquer(this,depart,destination)
+    //             }
+    //         }
+    //     }
+    // }
+
+    // class Bus {
+    //     constructor(personnes,caisse){
+    //         this.personnes = personnes;
+    //         this.caisse = caisse;
+    //         this.embarquer = (depart,destination,passager) => {
+    //             if (passager.argent >= 2.80) {
+    //                 passager.argent -= 2.80;
+    //                 this.caisse += 2.80;
+    //                 depart.personnes.splice(depart.personnes.indexOf(passager),1);
+    //                 destination.personnes.push(passager);
+    //                 console.log(`Bonjour ${passager.prenom}, bienvenu(e) à bord, nous allons à ${destination.nom}`);
+    //             } else {
+    //                 depart.personnes.splice(depart.personnes.indexOf(passager),1);
+    //                 destination.personnes.push(passager);
+    //                 console.log(`Veuillez quitter mon bus`);
+    //                 console.log(`C'est pas grave, ${passager.nom} va se déplacer à pied`);
+    //             }
+    //         }
+    //     }
+    // }
+
+    // let nghia = new Personne("Mai", "Nghia",1);
+    // let gauthier = new Personne("CS17","Gauthier",100);
+    // let delijn = new Bus([],10);
+
+    // maison.personnes.push(nghia);
+    // nghia.seDeplacer(maison,molengeek);
+    // nghia.seDeplacer(molengeek,snack,delijn);
+    // nghia.seDeplacer(snack,molengeek);
+    // console.log(snack);
+    // console.log(nghia,gauthier);
+
+
+// EXO5_CLASS
+// PART 1 + PART 2
+
+class Eleve {
+    constructor(prenom,nom,sexe,age){
         this.prenom = prenom;
-        this.argent = argent;
+        this.nom = nom;
+        this.sexe = sexe;
+        this.age = age;
     }
-
-    seDeplacer = (lieu) => {
-        embarquer = () => {
-
-        }
-    }
-}
-
-
-
-let marc = new Personne("julo","marc",658);
-
-class Bus {
-    constructor(personne,caisse){
-        this.personne = personne;
-        this.caisse = caisse;
-    }
-
-    embarquer = () => {
-        seDeplacer = (Personne) => {
-            if (argent) {
-                Personne.argent -= prix.argent
-                Bus.caisse += prix.argent
+        presenter = (eleve) => {
+            if (this.sexe == "masculin") {
+                alert(`Bonjour Monsieur ${this.prenom} ${this.nom}`)
+            } else if ( this.sexe == "feminin"){
+                alert(`Bonjour Madame ${this.prenom} ${this.nom}`)
+            } else {
+                alert(`Bonjour le non binaire ${this.prenom}${this.nom}`)
             }
         }
+
+        galocher = (eleve) => {
+            if (!this.sexe) {
+                
+            }
+        }
+
     }
-}
+
+
+    let patrick = new Eleve("patrick","Nubz","masculin",26);
+    let antho = new Eleve("antho","aloza","masculin",34);
+    let mireille = new Eleve("mireille","mathieu","feminin",65);
+    let manon = new Eleve("manon","casset","feminin",19);
+
+
+    patrick.galocher(antho);
+
+    // console.log(patrick);
+    // console.log(manon);
