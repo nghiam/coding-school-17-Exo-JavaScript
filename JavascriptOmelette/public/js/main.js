@@ -14,6 +14,9 @@ class Personne {
             }
         }
         this.couper = (ingredient,outil) => {
+            if( ingredient.etat == "entier") {
+                ingredient.etat = outil.action;
+            }
 
         }
     }
@@ -60,10 +63,10 @@ class Bol {
     }
 }
 
-let Nghia = new Personne("Nghia","epicerie",200);
+let nghia = new Personne("nghia","epicerie",200);
 
 let maison = new Lieu("maison",[]);
-let couteau = new Outil("couteau", "coupé");
+let couteau = new Outil("couteau","coupé");
 
 let oeuf = new Ingredient("oeuf","entier",1.20);
 let oignon = new Ingredient("oignon","coupe",1);
@@ -83,21 +86,21 @@ let epicerie = new Lieu("epicerie",[],[
 let poele = new Poele([]);
 let bol = new Bol([])
 
- // let Nghia = new Personne("Nghia","maison",200); Nghia.lieu => maison
+ // let nghia = new Personne("nghia","maison",200); nghia.lieu => maison
 
- Nghia.seDeplacer(maison)
-console.log(`${Nghia.nom} est actuellement à la ${Nghia.lieu.nom}`);
+ nghia.seDeplacer(maison)
+console.log(`${nghia.nom} est actuellement à la ${nghia.lieu.nom}`);
 
- // let Nghia = new Personne("Nghia","epicerie",200); Nghia.lieu => epicerie
- Nghia.seDeplacer(epicerie)
-console.log(`${Nghia.nom} est actuellement à la ${Nghia.lieu.nom}`);
+ // let nghia = new Personne("nghia","epicerie",200); nghia.lieu => epicerie
+ nghia.seDeplacer(epicerie)
+console.log(`${nghia.nom} est actuellement à la ${nghia.lieu.nom}`);
 
 
 // on retire le premier element du tableau
 
-Nghia.mainDroite = epicerie.panier.shift();
+nghia.mainDroite = epicerie.panier.shift();
 
-console.log(`${Nghia.nom} a pris un ${Nghia.mainDroite.type}`);
+console.log(`${nghia.nom} a pris un ${nghia.mainDroite.type}`);
 
 for (let index = 0; index < ingredients.length; index++) {
     
@@ -105,27 +108,27 @@ for (let index = 0; index < ingredients.length; index++) {
 
     console.log(`J'ai pris un ${ingredients[index].nom}`); 
 
-    Nghia.mainDroite.contenu.push(ingredients[index]);
+    nghia.mainDroite.contenu.push(ingredients[index]);
 }
 
-console.log(Nghia.mainDroite);
+console.log(nghia.mainDroite);
 
 
 // Payer chaque ingrédient récupéré dans le panier. Avec une boucle aussi, on va les passer 1 à 1 dans la fonction payerArticle()
-for (let index = 0; index < Nghia.mainDroite.contenu.length; index++) {
+for (let index = 0; index < nghia.mainDroite.contenu.length; index++) {
     
-    Nghia.payerArticle(ingredients[index]);
+    nghia.payerArticle(ingredients[index]);
     
 }
 
 // Afficher un message de ce qu'il reste d'argent sur le personnage.
 
-console.log(` il reste ${Nghia.argent} €`);
+console.log(` il reste ${nghia.argent} €`);
 
 // rentrer à la maison (comme ça on pourra cuisiner)
 
-Nghia.seDeplacer(maison)
-console.log(`${Nghia.nom} est actuellement à la ${Nghia.lieu.nom}`);
+nghia.seDeplacer(maison)
+console.log(`${nghia.nom} est actuellement à la ${nghia.lieu.nom}`);
 
 // mettre chaque ingrédient dans le bol (1 à 1 donc avec une boucle)
 
@@ -140,18 +143,39 @@ for (let index = 0; index < ingredients.length; index++) {
 
 // Vérifier que les ingrédients ne se trouvent plus dans le panier (oups ! on a oublié de le rapporter x)
 
-Nghia.mainDroite.contenu = [];
+nghia.mainDroite.contenu = [];
 
-console.log(Nghia.mainDroite.contenu);
+console.log(nghia.mainDroite.contenu);
 
 // Retourner à l'épicerie pour rapporter le panier. (donc seDeplacer)
 
-Nghia.seDeplacer(epicerie)
-console.log(`${Nghia.nom} est actuellement à la ${Nghia.lieu.nom}`);
+nghia.seDeplacer(epicerie)
+console.log(`${nghia.nom} est actuellement à la ${nghia.lieu.nom}`);
 
 // puis enlever le panier de la main droite 
 
+ epicerie.panier.push(nghia.mainDroite);
 
+nghia.mainDroite = [];
 
-// et le remetre dans les paniers de l'épicerie.)
+ console.log(nghia.mainDroite);
+ 
+ // et le remetre dans les paniers de l'épicerie.)
+ 
+ console.log(epicerie.panier);
 
+console.log(` le panier est desormais vide`);
+
+// Retourner à la maison pour continuer l'omelette
+ 
+nghia.seDeplacer(maison)
+console.log(`${nghia.nom} est actuellement à la ${nghia.lieu.nom}`);
+
+console.log(`nghia est de retour pour cuisiner`);
+
+// Vérifier chaque ingrédient dans le bol et le couper seulement s'il est entier ! Pour ça on utilise la méthode couper de personnage
+
+for (let index = 0; index < bol.ingredient.length; index++) {
+    
+    console.log(ingredient.length[index]);
+}
