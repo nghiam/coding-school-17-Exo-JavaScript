@@ -292,3 +292,44 @@ class Eleve {
 
     // console.log(patrick);
     // console.log(manon);
+
+    // CORRECTION
+
+    // class Eleve {
+    //     constructor(prenom,nom,sexe,age){
+    //         this.prenom=prenom;
+    //         this.nom=nom;
+    //         this.sexe=sexe;
+    //         this.age=age;
+    //         this.presenter = ()=>{
+    //             if (this.sexe == 'f') {
+    //                 alert(`Bonjour Madame ${this.prenom} ${this.nom}`);
+    //             } else if (this.sexe == 'h') {
+    //                 alert(`Bonjour Monsieur ${this.prenom} ${this.nom}`);
+    //             }else{
+    //                 alert(`Bonjour le non-binaire ${this.prenom} ${this.nom}`);
+    //             }
+    //         }
+    //         this.galoche = (persoAGaloche)=>{
+    //             if (persoAGaloche.sexe !== this.sexe) {
+    //                 alert(`${this.prenom} embrasse ${persoAGaloche.prenom}`);
+    //             }else{
+    //                 alert(`${this.prenom} essaye d'embrasser ${persoAGaloche.prenom} :dégage tu pue ${this.prenom} !`);
+    //             }
+    //         }
+    //     }
+    // }
+    
+    // let eleve1 = new Eleve ("Muff","l'incompris","h",19);
+    // let eleve2 = new Eleve ("Said","Le tout puissant","h",20);
+    // let eleve3 = new Eleve ("Mahad","la question","non-binaire",26);
+    // let eleve4 = new Eleve ("Abdel","les cheveux lisses","f",25);
+    
+    // eleve1.presenter();
+    // eleve2.presenter();
+    // eleve3.presenter();
+    // eleve4.presenter();
+    
+    // eleve1.galoche(eleve2);
+    // eleve2.galoche(eleve3);
+    // eleve3.galoche(eleve4);
