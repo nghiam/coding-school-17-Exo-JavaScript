@@ -1,69 +1,33 @@
-class Personne {
-    constructor(nom,lieu,argent,mainDroite=[],mainGauche=[]) {
-        this.nom = nom;
-        this.lieu = lieu;
-        this.argent = argent;
-        this.mainDroite = mainDroite;
-        this.mainGauche = mainGauche;
-        this.seDeplacer = (lieu) => {
-            this.lieu = lieu;
-        }
-        this.payerArticle = (article) => {
-            if (this.argent >= article.prix) {
-                this.argent -= article.prix;
-            }
-        }
-        this.couper = (ingredient,outil) => {
-            if( ingredient.etat == "entier") {
-                ingredient.etat = outil.action;
-            }
+import Personne from "./personne.js"
+import Lieu from "./lieu.js"
+import Outil from "./outil.js"
+import Ingredient from "./ingredient.js"
 
-        }
-    }
-}
-
-class Lieu {
-    constructor(nom,personne,panier) {
-        this.nom = nom;
-        this.personne = personne;
-        this.panier = panier;
-    }
-}
-
-class Outil {
-    constructor(nom,action) {
-        this.nom = nom;
-        this.action = "coupe";
-    }
-}
-
-class Ingredient {
-    constructor(nom,etat,prix) {
-        this.nom = nom;
-        this.etat = etat;
-        this.prix = prix;
-    }
-}
 
 class Poele {
     constructor(tableau) {
         this.tableau = tableau;
         this.cuir = () => {
-
+            setTimeout(() => {
+                tableau[0] = tableau[0] + " cuit"
+                console.log(tableau[0]);
+                console.log(`Super ! notre omelette est cuite !`);
+            }, 4000)
         }
     }
 }
+
 
 class Bol {
     constructor(tableau) {
         this.tableau = tableau;
         this.melanger = (newMelange) => {
-
+            this.tableau = newMelange
         }
     }
 }
 
-let nghia = new Personne("nghia","epicerie",200);
+let nghia = new Personne("nghia","epicerie",50);
 
 let maison = new Lieu("maison",[]);
 let couteau = new Outil("couteau","coupé");
@@ -106,7 +70,7 @@ for (let index = 0; index < ingredients.length; index++) {
     
     // Afficher un message à chaque ingrédient pris
 
-    console.log(`J'ai pris un ${ingredients[index].nom}`); 
+    console.log(`J'ai pris un ${ingredients[index].nom} dans mon panier 1`); 
 
     nghia.mainDroite.contenu.push(ingredients[index]);
 }
@@ -123,7 +87,7 @@ for (let index = 0; index < nghia.mainDroite.contenu.length; index++) {
 
 // Afficher un message de ce qu'il reste d'argent sur le personnage.
 
-console.log(` il reste ${nghia.argent} €`);
+console.log(` il me reste actuellement ${nghia.argent} €`);
 
 // rentrer à la maison (comme ça on pourra cuisiner)
 
@@ -175,7 +139,41 @@ console.log(`nghia est de retour pour cuisiner`);
 
 // Vérifier chaque ingrédient dans le bol et le couper seulement s'il est entier ! Pour ça on utilise la méthode couper de personnage
 
-for (let index = 0; index < bol.ingredient.length; index++) {
+
+for (let index = 0; index < ingredients.length; index++) {
     
-    console.log(ingredient.length[index]);
+// oeuf & fromage deviennent "coupe"
+    nghia.couper(ingredients[index],couteau)
+
+    console.log(` L'ingredient ${ingredients[index].nom} est toujours dans le bol`);
 }
+
+
+// Mélanger le contenu du bol avec la méthode melanger. on va nommer ce mélange une 'omelette' (à passer en param).
+
+bol.melanger("omelette");
+
+// Afficher un message avec le nouveau mélange
+
+console.log(`Mon bol contient une : ${bol.tableau}`);
+
+// vider le contenu du bol dans la poele. 
+
+poele.tableau.push(bol.tableau);
+
+console.log(poele);
+
+
+// Il ne doit plus rien avoir dans le bol et y avoir juste l'omelette pas cuite.
+
+console.log(bol.tableau);
+
+bol.tableau = [];
+
+console.log(bol.tableau);
+
+// Cuire l'omelette avec la méthode de la poele 
+
+poele.cuir();
+
+
